@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle><ion-text color="secondary">{{ movie.star }}</ion-text></ion-card-subtitle>
+    <ion-card-title>{{ movie.movieName }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p><b>Directed by:</b> <ion-text color="secondary">{{ movie.director }}</ion-text></p>
+    <p><b>Dubbed:</b> <ion-text color="dark">{{ movie.dubbed }}</ion-text></p>
+    <p><b>Duration:</b> <ion-text color="dark">{{ movie.duration }}</ion-text></p>
+    <p><b>Desciption:</b></p>
+    <p><ion-text color="dark">{{ movie.description }}</ion-text></p>
+    <p>
+      <ion-chip color="tertiary">
+        <ion-icon name="language-outline"></ion-icon>
+        <ion-label color="dark">{{ movie.lang }}</ion-label>
+      </ion-chip>
+  </p>
+  </ion-card-content>
+</ion-card>

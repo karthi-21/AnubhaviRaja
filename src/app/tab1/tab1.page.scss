@@ -1,0 +1,29 @@
+.image-tumb {
+    max-width: 150px !important;
+    width: 150px !important;
+    height: 200px !important;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px -2px #000000;
+}
+
+.image-tumb:hover {
+    cursor: pointer;
+}
+  
+    /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+    .image-tumb {
+        max-width: 80px !important;
+        width: 80px !important;
+        height: 110px !important;
+    }
+}
+
+  /* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+    .image-tumb {
+        max-width: 150px !important;
+        width: 150px !important;
+        height: 200px !important;
+    }
+}

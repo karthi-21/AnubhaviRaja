@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      News
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,33 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+  <div class="mobile">
+    <ion-card *ngFor="let article of articles">
+      <img [src]="article.urlToImage" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ article.author }}</ion-card-subtitle>
+        <ion-card-title>{{ article.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{ article.description }}</ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="not-mobile">
+    <ion-card *ngFor="let article of articles">
+      <ion-row>
+        <ion-col class="img-col">
+          <img [src]="article.urlToImage" />
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-subtitle><ion-text color="secondary">{{ article.author }}</ion-text></ion-card-subtitle>
+            <ion-card-title>{{ article.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>{{ article.description }}</ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
 </ion-content>
